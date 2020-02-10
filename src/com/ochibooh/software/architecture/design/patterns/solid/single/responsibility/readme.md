@@ -40,7 +40,7 @@ public class Book implements BookImp {
     public Book(int numOfPages, String authorName) {
              this.numOfPages = numOfPages;
              this.authorName = authorName;
-             this.bookPersistence = new BookPersistence(); // bookPersistence to new instance
+             this.bookPersistence = new BookPersistence(); /* bookPersistence to new instance */
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Book implements BookImp {
     
     @Override
     public void save() {
-        this.bookPersistence.save(this); // calling save method
+        this.bookPersistence.save(this); /* calling save method */
     }
 }
 ```
