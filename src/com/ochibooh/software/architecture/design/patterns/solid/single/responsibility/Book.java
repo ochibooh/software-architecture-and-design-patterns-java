@@ -48,7 +48,7 @@ public class Book implements BookImp {
 
     @Override
     public void print() {
-        System.out.println("Printing a book...");
+        System.out.println(String.format("Printing a book...[ %s ]", this));
     }
 
     @Override
