@@ -21,9 +21,13 @@ public class Book implements BookImp {
     private int numOfPages;
     private String authorName;
 
+    private BookPersistence bookPersistence;
+
     public Book(int numOfPages, String authorName) {
         this.numOfPages = numOfPages;
         this.authorName = authorName;
+
+        this.bookPersistence = new BookPersistence();
     }
 
     public int getNumOfPages() {
@@ -49,14 +53,11 @@ public class Book implements BookImp {
 
     @Override
     public void save() {
-        System.out.println("Saving a book...");
+        this.bookPersistence.save(this);
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "numOfPages=" + numOfPages +
-                ", authorName='" + authorName + '\'' +
-                '}';
+        return String.format("Book{numOfPages=%d, authorName=%s}", numOfPages, authorName);
     }
 }

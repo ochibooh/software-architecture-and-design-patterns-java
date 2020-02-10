@@ -16,10 +16,19 @@
 
 package com.ochibooh.software.architecture.design.patterns;
 
+import com.ochibooh.software.architecture.design.patterns.solid.single.responsibility.Book;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("HELLO WORLD? Welcome to Software Architecture and Design Patterns in Java");
         System.out.println("=========================================================================");
         System.out.println();
+
+        System.out.println("Solid Principles");
+        System.out.println("Single responsibility");
+        System.out.println("=========================================================================");
+        Book book = new Book(10, "Phelix Ochieng");
+        book.print();
+        book.save();
     }
 }

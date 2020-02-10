@@ -17,7 +17,7 @@
 package com.ochibooh.software.architecture.design.patterns.solid.single.responsibility;
 
 public interface BookImp {
-    public void print();
+    void print();
 
-    public void save();
+    void save();
 }

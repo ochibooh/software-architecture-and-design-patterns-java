@@ -12,3 +12,5 @@ public void save(){
 }`
 
 Instead use an `Interface` to implement various properties of the class.
+
+On the other hand, we should favour `Composition` over `Inheritance`. Create a new class that performs a task and call the task on the override method to do the task 
