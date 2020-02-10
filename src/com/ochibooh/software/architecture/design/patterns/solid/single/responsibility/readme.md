@@ -6,19 +6,21 @@
 
 Have a method for printing a book and another for saving a book
 
-```
-public void print() {
-    System.out.println("Printing a book...");
-}
-
-public void save(){
-    System.out.println("Saving a book...");
+```java
+public class Book {
+    public void print() {
+        System.out.println("Printing a book...");
+    }
+    
+    public void save(){
+        System.out.println("Saving a book...");
+    }
 }
 ```
 
 Instead use an `Interface` to implement various properties of the class.
 
-```
+```java
 public interface BookImp {
     void print();
     void save();
@@ -27,7 +29,7 @@ public interface BookImp {
 
 On the other hand, we should favour `Composition` over `Inheritance`. Create a new class that performs a task and call the task on the override method to do the task 
 
-```
+```java
 public class Book implements BookImp {
 
     private int numOfPages;
@@ -38,7 +40,7 @@ public class Book implements BookImp {
     public Book(int numOfPages, String authorName) {
              this.numOfPages = numOfPages;
              this.authorName = authorName;
-             this.bookPersistence = new BookPersistence(); // bookPersistence to new instance
+             this.bookPersistence = new BookPersistence(); /* bookPersistence to new instance */
     }
 
     @Override
@@ -48,7 +50,7 @@ public class Book implements BookImp {
     
     @Override
     public void save() {
-        this.bookPersistence.save(this); // calling save method
+        this.bookPersistence.save(this); /* calling save method */
     }
 }
 ```
